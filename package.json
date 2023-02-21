@@ -1,0 +1,61 @@
+{
+  "name": "dq-player",
+  "version": "0.1.0",
+  "keywords": [
+    "vue",
+    "element-ui",
+    "hls.js"
+  ],
+  "main": "lib/dq-player.umd.min.js",
+  "description": "大前风口专用视频播放器，支持弹幕",
+  "author": {
+    "name": "leegoudan",
+    "email": "lee705013140@163.com"
+  },
+  "license": "MIT",
+  "repository": {},
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name dq-player --dest lib src/components/index.js",
+    "pub": "npm publish --registry=http://47.108.152.92:6081/repository/npm-hosted/"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.2",
+    "hls.js": "^1.1.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "url-loader": "^4.1.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
