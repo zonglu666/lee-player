@@ -5,7 +5,7 @@
     <el-button size="mini" type="danger" @click="showPlayer = false">隐藏</el-button>
     <el-button size="mini" type="warning" @click="getHasPlayedTime">获取视频已播放时长</el-button>
     <div v-if="showPlayer" class="center">
-      <dq-player :options="options" ref="aaaaaaa"></dq-player>
+      <lee-player :options="options" ref="aaaaaaa"></lee-player>
     </div>
     <div class="send">
       <el-input size="mini" v-model="newDanmu" placeholder="写入弹幕~~" clearable style="width: 500px" />

@@ -1,4 +1,4 @@
-# dq-player
+# lee-player
 
 ## Project setup
 ```

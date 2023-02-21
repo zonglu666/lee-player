@@ -8,8 +8,8 @@
   <div :class="`pip-pl pl-${options.el}`" :style="`background: ${options.theme}`">
     <i class="close-btn iconfont icon-quxiao" @click="destroyPipPlayer"></i>
     <video
-      :id="`dq-player-${options.el}`"
-      class="pip-dq-player"
+      :id="`lee-player-${options.el}`"
+      class="pip-lee-player"
       :controls="false"
       :style="`max-width: 100%; max-height:100%`"
       :poster="options.poster"
@@ -154,7 +154,7 @@
 import LoadingImg from "@/assets/loading.png";
 import ErrorImg from "@/assets/error.png";
 export default {
-  name: "dq-player-sub-mp4",
+  name: "lee-player-sub-mp4",
   props: {
     options: {
       type: Object,
@@ -241,7 +241,7 @@ export default {
     // 重置播放器
     pipResetPlayer(){
       this.pipPlayer = null;
-      const dqPlayer = document.getElementById(`dq-player-${this.options.el}`);
+      const dqPlayer = document.getElementById(`lee-player-${this.options.el}`);
       if(dqPlayer){
         dqPlayer.style.height = this.height + "px";
         dqPlayer.src = "";
@@ -325,7 +325,7 @@ export default {
     },
     // 初始化 MP4 播放器
     pipInitPlayer() {
-      this.pipPlayer = document.getElementById(`dq-player-${this.options.el}`);
+      this.pipPlayer = document.getElementById(`lee-player-${this.options.el}`);
       this.pipVolume = this.pipGetPlayInfo('volume') || this.pipVolume;
       this.pipSpeedType = this.pipGetPlayInfo('speed')|| this.pipSpeedType;
       const l = this.options.url.filter((k) => {
@@ -1117,7 +1117,7 @@ export default {
     bottom: 0;
   }
 }
-.pip-dq-player {
+.pip-lee-player {
   width: 100% !important;
   height: 100%!important;
   // pointer-events: none;

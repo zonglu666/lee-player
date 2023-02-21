@@ -7,7 +7,7 @@
   <!-- 底部、快进退、中部音量: z-index: 40 -->
   <div class="pl" :style="`background: ${options.theme}`">
     <video
-      id="dq-player"
+      id="lee-player"
       :controls="false"
       :style="`max-width: 100%; max-height:100%`"
       :poster="options.poster"
@@ -182,7 +182,7 @@ import ErrorImg from "@/assets/error.png";
 import Hls from 'hls.js'
 import Danmu from '../Danmu/index.vue'
 export default {
-  name: "dq-player-flv",
+  name: "lee-player-flv",
   props: {
     options: {
       type: Object,
@@ -267,7 +267,7 @@ export default {
       this.vplayer && this.vplayer.destroy();
       this.vplayer && this.vplayer.detachMedia();
       this.vplayer = null;
-      const dqPlayer = document.getElementById("dq-player");
+      const dqPlayer = document.getElementById("lee-player");
       if(dqPlayer){
         dqPlayer.style.height = this.height + "px";
         dqPlayer.src = "";
@@ -396,7 +396,7 @@ export default {
     },
     // 初始化 M3U8 播放器
     initPlayer() {
-      const video = document.getElementById("dq-player");
+      const video = document.getElementById("lee-player");
       const l = this.options.url.filter((k) => {
         return k.quality === this.qualityType;
       });
@@ -1171,7 +1171,7 @@ export default {
     bottom: 0;
   }
 }
-#dq-player {
+#lee-player {
   width: 100% !important;
   height: 100%!important;
 }

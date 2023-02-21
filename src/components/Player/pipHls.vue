@@ -7,8 +7,8 @@
   <div :class="`pip-pl pl-${options.el}`" :style="`background: ${options.theme}`">
     <i class="close-btn iconfont icon-quxiao" @click="destroyPipPlayer"></i>
     <video
-      :id="`dq-player-${options.el}`"
-      class="pip-dq-player"
+      :id="`lee-player-${options.el}`"
+      class="pip-lee-player"
       :controls="false"
       :style="`max-width: 100%; max-height:100%`"
       :poster="options.poster"
@@ -156,7 +156,7 @@ import LoadingImg from "@/assets/loading.png";
 import ErrorImg from "@/assets/error.png";
 import Hls from 'hls.js'
 export default {
-  name: "dq-player-sub-hls",
+  name: "lee-player-sub-hls",
   props: {
     options: {
       type: Object,
@@ -256,7 +256,7 @@ export default {
       this.subPlayer && this.subPlayer.destroy();
       this.subPlayer && this.subPlayer.detachMedia();
       this.subPlayer = null;
-      const dqPlayer = document.getElementById(`dq-player-${this.options.el}`);
+      const dqPlayer = document.getElementById(`lee-player-${this.options.el}`);
       if(dqPlayer){
         dqPlayer.style.height = this.height + "px";
         dqPlayer.src = "";
@@ -375,7 +375,7 @@ export default {
     // 开始触发播放位置
     pipVideoSeeked() {
       // console.log("video Seeked");
-      const video = document.getElementById(`dq-player-${this.options.el}`);
+      const video = document.getElementById(`lee-player-${this.options.el}`);
       this.pipStartPlay(video);
     },
     // 初始化 M3U8 播放器
@@ -387,7 +387,7 @@ export default {
     },
     // 初始化 M3U8 播放器
     pipInitPlayer() {
-      const video = document.getElementById(`dq-player-${this.options.el}`);
+      const video = document.getElementById(`lee-player-${this.options.el}`);
       const l = this.options.url.filter((k) => {
         return k.quality === this.pipQualityType;
       });
@@ -1221,7 +1221,7 @@ export default {
     bottom: 0;
   }
 }
-.pip-dq-player {
+.pip-lee-player {
   width: 100% !important;
   height: 100%!important;
   // pointer-events: none;

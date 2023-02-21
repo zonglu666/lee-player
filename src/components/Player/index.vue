@@ -14,7 +14,7 @@ import hlsBar from './hlsBar.vue';
 import pipMp4 from './pipMp4.vue';
 import pipHls from './pipHls.vue';
 export default {
-  name: "dq-player",
+  name: "lee-player",
   components: {
     mp4Bar,
     hlsBar,

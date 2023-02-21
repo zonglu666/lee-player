@@ -1,13 +1,13 @@
 {
-  "name": "dq-player",
+  "name": "lee-player",
   "version": "0.1.0",
   "keywords": [
     "vue",
     "element-ui",
     "hls.js"
   ],
-  "main": "lib/dq-player.umd.min.js",
-  "description": "大前风口专用视频播放器，支持弹幕",
+  "main": "lib/lee-player.umd.min.js",
+  "description": "视频播放器，支持弹幕",
   "author": {
     "name": "leegoudan",
     "email": "lee705013140@163.com"
@@ -18,7 +18,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name dq-player --dest lib src/components/index.js",
+    "lib": "vue-cli-service build --target lib --name lee-player --dest lib src/components/index.js",
     "pub": "npm publish --registry=http://47.108.152.92:6081/repository/npm-hosted/"
   },
   "dependencies": {
